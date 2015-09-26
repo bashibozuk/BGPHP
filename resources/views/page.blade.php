@@ -3,14 +3,14 @@
 <head>
     <title>BGPHP Container</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/bootstrap-theme.css"/>
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/form/Form.js"></script>
-    <script type="text/javascript" src="assets/js/form/AjaxForm.js"></script>
-    <script type="text/javascript" src="assets/js/RegisterForm.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap-theme.css"/>
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/form/Form.js"></script>
+    <script type="text/javascript" src="/assets/js/form/AjaxForm.js"></script>
+    <script type="text/javascript" src="/assets/js/RegisterForm.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
     <style>
 
         .site-panel {

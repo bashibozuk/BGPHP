@@ -1,0 +1,99 @@
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map-canvas"></div>
+<style>
+    #map-canvas 
+    { 
+        height: 400px; 
+        width: 500px;
+    }
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script>
+    
+var markers 
+var map,
+marker;
+
+markers = new Array;
+markers[0] = {
+    title: 'container 1',
+    icon: 'http://steeplemedia.com/images/markers/markerGreen.png',
+    position: new google.maps.LatLng( 42.657854, 23.314953 )
+};
+markers[1] = {
+    title: 'container 2',
+    icon: 'http://steeplemedia.com/images/markers/markerRed.png',
+    position: new google.maps.LatLng( 42.657854, 23.314953 )
+};
+
+function initMarkers() {
+    for (var i in markers) {
+        markers[i] = new google.maps.Marker({
+            position: markers[i].position,
+            icon: markers[i].icon,
+            title: markers[i].title,
+            map: map
+        });
+        markers[i].setMap( map );
+    }
+    
+    marker = markers[0];
+}
+    
+function initialize() {
+
+    var myLatLng = new google.maps.LatLng( 42.657854, 23.314953 ),
+        myOptions = {
+            zoom: 16,
+            center: myLatLng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+            
+    map = new google.maps.Map( document.getElementById( 'map-canvas' ), myOptions );
+        
+    initMarkers();
+}
+
+function moveContainer(marker, LatLng) {
+    marker.setPosition( LatLng );
+};
+
+initialize();
+
+var counter = 0;
+
+var fakePosition = new Array;
+fakePosition[0]  = new google.maps.LatLng( 42.657854, 23.314953 );
+fakePosition[1] = new google.maps.LatLng( 42.659432, 23.316589 );
+fakePosition[2] = new google.maps.LatLng( 42.660462, 23.320197 );
+fakePosition[3] = new google.maps.LatLng( 42.659545, 23.323550 );
+fakePosition[4] = new google.maps.LatLng( 42.658835, 23.328055 );
+fakePosition[5] = new google.maps.LatLng( 42.656912, 23.328023 );
+fakePosition[6] = new google.maps.LatLng( 42.656712, 23.325518 );
+fakePosition[7] = new google.maps.LatLng( 42.656765, 23.322744 );
+fakePosition[8] = new google.maps.LatLng( 42.658345, 23.321539 );
+
+
+setInterval(function() {
+    counter++;
+    console.log(counter);
+    if (counter > 7) {
+        counter = 0;
+    }
+    
+    moveContainer(markers[0], fakePosition[counter]);
+    
+}, 1000);
+
+
+</script>
+
+<button onclick="moveContainer(marker, fakePosition[0])">1</button>
+<button onclick="moveContainer(marker, fakePosition[1])">2</button>
+<button onclick="moveContainer(marker, fakePosition[2])">3</button>
+<button onclick="moveContainer(marker, fakePosition[3])">4</button>
+<button onclick="moveContainer(marker, fakePosition[4])">5</button>
+<button onclick="moveContainer(marker, fakePosition[5])">6</button>
+<button onclick="moveContainer(marker, fakePosition[6])">7</button>
+<button onclick="moveContainer(marker, fakePosition[7])">8</button>
+<button onclick="moveContainer(marker, fakePosition[8])">9</button>
