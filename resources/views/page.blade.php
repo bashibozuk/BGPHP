@@ -10,6 +10,7 @@
     <script type="text/javascript" src="/assets/js/form/Form.js"></script>
     <script type="text/javascript" src="/assets/js/form/AjaxForm.js"></script>
     <script type="text/javascript" src="/assets/js/RegisterForm.js"></script>
+    <script type="text/javascript" src="/assets/js/TrackingForm.js"></script>
     <script type="text/javascript" src="/assets/js/GooGle.js"></script>
     <script type="text/javascript" src="/assets/js/app.js"></script>
     <style>
@@ -69,10 +70,10 @@
         </div>
 
         <div class="row site-panel" id="register">
-            <form id="register-form" action="server/contact.php" method="post" role="form">
+            <form id="register-form" action="/container" method="post" role="form">
 
                 <div class="form-group">
-                    <label for="contact-form-container_code">Name:</label>
+                    <label for="contact-form-container_code">Container Code:</label>
                     <input name="container_code" id="contact-form-container_code" class="form-control" type="text"/>
                     <p class="error"></p>
                 </div>
@@ -89,7 +90,7 @@
             <form id="tracking-form" action="server/contact.php" method="post" role="form">
 
                 <div class="form-group">
-                    <label for="contact-form-container_code">Name:</label>
+                    <label for="contact-form-container_code">Container Code:</label>
                     <input name="container_code" id="contact-form-container_code" class="form-control" type="text"/>
                     <p class="error"></p>
                 </div>

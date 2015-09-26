@@ -6,6 +6,10 @@ $(function(){
         form: $('#register-form')
     })
 
+    var trackingForm = new TrackingForm({
+        form: $('#tracking-form')
+    })
+
     new App($('nav'));
 });
 

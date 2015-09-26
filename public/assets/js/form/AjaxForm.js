@@ -80,3 +80,7 @@ AjaxForm.prototype.handleResponse = function (data) {
         return false;
     }
 }
+
+AjaxForm.prototype.handleError = function () {
+    alert('Error');
+}

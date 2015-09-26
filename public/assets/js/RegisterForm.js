@@ -9,7 +9,11 @@ function RegisterForm(config) {
         if (!_this.validate()) {
             _this.applyToForm();
         } else {
-            _this.send();
+            _this.send().success(function(data) {
+                _this.handleResponse(data)
+            }).fail(function() {
+                    _this.handleError()
+                });
         }
     });
     this.validators = {
@@ -26,5 +30,6 @@ RegisterForm.prototype = Object.create(AjaxForm.prototype);
 RegisterForm.prototype.constructor = RegisterForm;
 
 RegisterForm.prototype.handleResponse = function(data) {
-    console.log(data);
+alert('Success');
+    this.$form.reset();
 }
