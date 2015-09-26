@@ -87,7 +87,7 @@
         </div>
 
         <div class="row site-panel" id="track">
-            <form id="tracking-form" action="server/contact.php" method="post" role="form">
+            <form id="tracking-form" action="/container" method="get" role="form">
 
                 <div class="form-group">
                     <label for="contact-form-container_code">Container Code:</label>
