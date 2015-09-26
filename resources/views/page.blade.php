@@ -10,6 +10,7 @@
     <script type="text/javascript" src="/assets/js/form/Form.js"></script>
     <script type="text/javascript" src="/assets/js/form/AjaxForm.js"></script>
     <script type="text/javascript" src="/assets/js/RegisterForm.js"></script>
+    <script type="text/javascript" src="/assets/js/GooGle.js"></script>
     <script type="text/javascript" src="/assets/js/app.js"></script>
     <style>
 
@@ -21,6 +22,11 @@
             color: red;
         }
     </style>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+
+
+    </script>
 
 </head>
 <body>
@@ -77,6 +83,30 @@
                 </div>
             </form>
 
+        </div>
+
+        <div class="row site-panel" id="track">
+            <form id="tracking-form" action="server/contact.php" method="post" role="form">
+
+                <div class="form-group">
+                    <label for="contact-form-container_code">Name:</label>
+                    <input name="container_code" id="contact-form-container_code" class="form-control" type="text"/>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+
+                    <button class="btn btn-primary">Track</button>
+                </div>
+            </form>
+            <div id="map-canvas"></div>
+            <style>
+                #map-canvas
+                {
+                    height: 400px;
+                    width: 500px;
+                }
+            </style>
         </div>
     </div>
 </body>
