@@ -31,5 +31,7 @@ RegisterForm.prototype.constructor = RegisterForm;
 
 RegisterForm.prototype.handleResponse = function(data) {
 alert('Success');
-    this.$form.reset();
+    if (this.$form.length) {
+        this.$form.get(0).reset();
+    }
 }
