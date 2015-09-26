@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('page');
 });
+
+Route::post('container', 'Container@create');
+Route::get('container/{code}', 'Container@show');
