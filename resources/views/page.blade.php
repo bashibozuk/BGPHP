@@ -41,15 +41,28 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#"> Register Container</a></li>
-                        <li><a href="#"> Track Container</a></li>
+                        <li><a href="#register"> Register Container</a></li>
+                        <li><a href="#track"> Track Container</a></li>
                     </ul>
 
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
 
-        <div class="row site-panel">
+        <div class="row site-panel" id="index">
+
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Click 'Register container' to registrer new container or 'Track container to track your
+                        container'</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row site-panel" id="register">
             <form id="register-form" action="server/contact.php" method="post" role="form">
 
                 <div class="form-group">

@@ -8,6 +8,8 @@ function RegisterForm(config) {
         e.preventDefault();
         if (!_this.validate()) {
             _this.applyToForm();
+        } else {
+            _this.send();
         }
     });
     this.validators = {
