@@ -68,8 +68,7 @@ class Container extends Controller
             return response()->json($response);
         }
 
-        $container = DB::table('containers')->where('container_code', '=', $data['code'])->get();
-        
+        $container = DB::table('containers')->where('container_code', '=', $data['code'])->first();
         if (empty($container)) {
             $response = [
                 'status'  => 'ERROR',
